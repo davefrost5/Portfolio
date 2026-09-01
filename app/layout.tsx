@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, IBM_Plex_Sans } from "next/font/google";
+import { Syne, IBM_Plex_Sans } from "next/font/google";
 import { site } from "@/content/content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const instrumentSerif = Instrument_Serif({
+const syne = Syne({
   subsets: ["latin"],
-  weight: "400",
-  variable: "--font-instrument-serif",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-syne",
   display: "swap",
 });
 
@@ -20,6 +20,11 @@ const ibmPlexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000",
+  ),
   title: {
     default: `${site.name} — ${site.title}`,
     template: `%s — ${site.name}`,
@@ -39,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${instrumentSerif.variable} ${ibmPlexSans.variable}`}>
+    <html lang="en" className={`${syne.variable} ${ibmPlexSans.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <Header />
         <main className="flex-1">{children}</main>

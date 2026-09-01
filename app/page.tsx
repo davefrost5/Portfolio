@@ -12,16 +12,16 @@ export default function HomePage() {
             src={site.avatar}
             alt={site.name}
             fill
-            className="object-cover"
+            className="object-cover object-[center_22%]"
             priority
             sizes="128px"
           />
         </div>
         <div className="prose-editorial">
-          <h1 className="font-serif text-4xl tracking-tight text-ink md:text-5xl">
+          <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
             {site.name}
           </h1>
-          <p className="mt-2 text-lg text-accent">{site.title}</p>
+          <p className="mt-4 text-lg text-accent">{site.title}</p>
           <p className="mt-4 max-w-2xl leading-relaxed text-ink-muted">{site.intro}</p>
           <p className="mt-2 text-sm text-ink-muted">{site.location}</p>
         </div>

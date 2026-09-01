@@ -51,7 +51,7 @@ Every push to `main` triggers a new deployment.
 - Next.js 15 (App Router, Server Components)
 - TypeScript
 - Tailwind CSS v4
-- Instrument Serif + IBM Plex Sans (Google Fonts)
+- Syne + IBM Plex Sans (Google Fonts)
 - Website previews via Microlink screenshots (ISR, 24h revalidate)
 
 ## Build

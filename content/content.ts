@@ -6,7 +6,7 @@ export const site = {
   email: "Dfrost3374@gmail.com",
   linkedin: "https://www.linkedin.com/in/davefrost525",
   github: "https://github.com/davefrost5",
-  avatar: "https://avatars.githubusercontent.com/u/92494973?v=4",
+  avatar: "/photos/dave.jpg",
   tagline:
     "Full-stack engineer building platforms at the intersection of sports, energy, and healthcare.",
   intro:

@@ -38,7 +38,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
       </Link>
 
       <header className="mb-10">
-        <h1 className="font-serif text-4xl tracking-tight text-ink md:text-5xl">
+        <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
           {project.company}
         </h1>
         <p className="mt-2 text-lg text-accent">{project.role}</p>

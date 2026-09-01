@@ -6,7 +6,7 @@ export function Header() {
     <header className="border-b border-border">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <Link href="/" className="group">
-          <span className="font-serif text-xl tracking-tight text-ink group-hover:text-accent transition-colors">
+          <span className="font-serif text-xl tracking-wide text-ink group-hover:text-accent transition-colors">
             {site.name}
           </span>
         </Link>
