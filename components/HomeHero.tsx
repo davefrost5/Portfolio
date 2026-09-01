@@ -3,28 +3,31 @@ import { site } from "@/content/content";
 
 export function HomeHero() {
   return (
-    <section className="relative h-[85vh] min-h-[520px] max-h-[900px] w-full">
-      <Image
-        src={site.hero}
-        alt={`${site.name} demonstrating SYNC at the Stevens Innovation Expo`}
-        fill
-        priority
-        className="object-cover object-[center_40%]"
-        sizes="100vw"
-      />
-      <div
-        aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20"
-      />
-      <div className="relative flex h-full flex-col justify-end px-6 pb-14 pt-24 md:pb-20 md:pt-28">
-        <div className="mx-auto w-full max-w-5xl">
-          <h1 className="font-serif text-4xl leading-tight tracking-wide text-ink md:text-6xl lg:text-7xl">
+    <section className="mx-auto max-w-5xl px-6 pb-4 pt-10 md:pb-8 md:pt-14">
+      <div className="grid items-center gap-8 md:grid-cols-[minmax(0,544px)_1fr] md:gap-12">
+        <figure className="w-full max-w-[544px]">
+          <Image
+            src={site.hero}
+            alt={`${site.name} demonstrating SYNC at the Stevens Innovation Expo`}
+            width={544}
+            height={359}
+            priority
+            unoptimized
+            className="h-auto w-full border border-border"
+          />
+          <figcaption className="mt-3 text-xs uppercase tracking-[0.18em] text-ink-muted">
+            Stevens Innovation Expo
+          </figcaption>
+        </figure>
+
+        <div>
+          <h1 className="font-serif text-4xl leading-tight tracking-wide text-ink md:text-6xl">
             {site.name}
           </h1>
           <p className="mt-3 text-lg tracking-wide text-accent md:text-xl">
             {site.title}
           </p>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink/90 md:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">
             {site.intro}
           </p>
           <p className="mt-2 text-sm text-ink-muted">{site.location}</p>

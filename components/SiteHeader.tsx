@@ -1,9 +1,5 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
 
 export function SiteHeader() {
-  const pathname = usePathname();
-  return <Header overlay={pathname === "/"} />;
+  return <Header />;
 }
