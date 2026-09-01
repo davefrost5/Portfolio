@@ -11,7 +11,7 @@ export const site = {
   tagline:
     "Full-stack engineer building platforms at the intersection of sports, energy, and healthcare.",
   intro:
-    "I'm David Frost, a software engineer based in Hoboken, NJ. I studied Software Engineering at Stevens Institute of Technology (2021–2025) and now lead engineering as CTO at Discover NIL while continuing to ship products across React Native, Next.js, and real-time systems.",
+    "I'm David Frost, a software engineer based in Hoboken, NJ. I studied Software Engineering at Stevens Institute of Technology (2021–2025) and now lead engineering at Discover NIL as CTO and founding engineer while continuing to ship products across React Native, Next.js, and real-time systems.",
 };
 
 export type WorkProject = {
@@ -32,7 +32,7 @@ export const work: WorkProject[] = [
   {
     slug: "discover-nil",
     company: "Discover NIL",
-    role: "CTO",
+    role: "CTO and Founding Engineer",
     period: "Nov 2025–Present",
     location: "Hoboken, NJ",
     url: "https://www.discovernil.com/",
@@ -124,7 +124,7 @@ export const about = {
   headline: "About",
   paragraphs: [
     "I'm David Frost, a software engineer from Hoboken, NJ. I graduated from Stevens Institute of Technology with a B.E. in Software Engineering (2021–2025), where I co-founded SYNC Prosthetics and won the L3Harris Innovation Award at the Stevens Innovation Expo.",
-    "Today I serve as CTO at Discover NIL, building a dual-platform marketplace that connects 235k+ athletes with university and brand partners. Before that, I spent a year at FlexGen in Durham building real-time energy storage dashboards, and earlier built HIPAA-aware systems at SmartPatient Medical.",
+    "Today I serve as CTO and founding engineer at Discover NIL, building a dual-platform marketplace that connects 235k+ athletes with university and brand partners. Before that, I spent a year at FlexGen in Durham building real-time energy storage dashboards, and earlier built HIPAA-aware systems at SmartPatient Medical.",
     "I care about shipping products that work in the real world — whether that's a React Native app used by hundreds of thousands of athletes, a battery monitoring dashboard, or an EEG exoskeleton that classifies motor imagery without calibration.",
   ],
   skills: [
