@@ -48,6 +48,23 @@ export const work: WorkProject[] = [
     stack: ["React Native", "Next.js", "TypeScript", "SQL", "Python"],
   },
   {
+    slug: "force-fed",
+    company: "Force Fed",
+    role: "Developer",
+    period: "2026",
+    location: "Belmar, NJ",
+    url: "https://force-fed-band.vercel.app",
+    summary:
+      "Designed and built the public website for Force Fed, a punk rock band from Belmar, NJ — live gigs, Spotify player, booking calendar, and photo/video media.",
+    highlights: [
+      "Live gig listings with upcoming show dates and venues",
+      "Embedded Spotify player for in-page streaming",
+      "Booking calendar with request form and 48-hour response commitment",
+      "Photo and video grid from live and studio sessions",
+    ],
+    stack: ["React", "TypeScript", "Vite"],
+  },
+  {
     slug: "flexgen",
     company: "FlexGen",
     role: "Full-Stack SWE",
