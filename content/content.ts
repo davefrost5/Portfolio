@@ -7,6 +7,7 @@ export const site = {
   linkedin: "https://www.linkedin.com/in/davefrost525",
   github: "https://github.com/davefrost5",
   avatar: "/photos/dave.jpg",
+  hero: "/photos/hero.jpg",
   tagline:
     "Full-stack engineer building platforms at the intersection of sports, energy, and healthcare.",
   intro:

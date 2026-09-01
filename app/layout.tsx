@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Syne, IBM_Plex_Sans } from "next/font/google";
 import { site } from "@/content/content";
-import { Header } from "@/components/Header";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteMain } from "@/components/SiteMain";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: site.name,
     description: site.tagline,
     type: "website",
-    images: [site.avatar],
+    images: [site.hero],
   },
 };
 
@@ -46,8 +47,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${syne.variable} ${ibmPlexSans.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
+        <SiteHeader />
+        <SiteMain>{children}</SiteMain>
         <Footer />
       </body>
     </html>
