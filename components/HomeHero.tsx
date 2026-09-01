@@ -9,7 +9,7 @@ export function HomeHero() {
         alt={`${site.name} demonstrating SYNC at the Stevens Innovation Expo`}
         fill
         priority
-        className="object-cover object-[center_35%]"
+        className="object-cover object-[center_40%]"
         sizes="100vw"
       />
       <div
