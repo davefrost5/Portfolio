@@ -141,6 +141,8 @@ export const resume = {
 /** Paste LinkedIn post URLs here — cards fetch OG metadata via Microlink. */
 export const linkedinPosts: string[] = [
   "https://www.linkedin.com/posts/davefrost525_discover-nil-activity-7477432308610969600-z-pe",
+  "https://www.linkedin.com/posts/davefrost525_here-is-an-additional-video-from-the-senior-activity-7328514354331451392-SuZI",
+  "https://www.linkedin.com/posts/davefrost525_along-with-cooper-foote-nicolas-accardo-activity-7328464454436728832-X_pG",
   "https://www.linkedin.com/posts/dave-frost-9025a3248_the-stevens-innovation-expo-is-coming-up-activity-7323075848230653953-VLe_",
 ];
 
