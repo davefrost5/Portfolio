@@ -70,6 +70,7 @@ export const work: WorkProject[] = [
     role: "Developer",
     period: "2026",
     location: "Hoboken, NJ",
+    url: "https://marquee-sigma-three.vercel.app",
     repoUrls: ["https://github.com/davefrost5/marquee"],
     summary:
       "Built Marquee, a multi-tenant SaaS for band websites — public sites for music, shows, booking, and media, plus a per-tenant admin portal — evolved from the Force Fed prototype.",
@@ -78,7 +79,7 @@ export const work: WorkProject[] = [
       "Force Fed as the first tenant; Neon Harbor as a seeded demo tenant",
       "Admin tools for shows, booking availability, booking inbox, site branding, and gallery uploads",
       "Onboarding wizard for new bands: slug, brand colors, template, optional Spotify and assets, then publish",
-      "PostgreSQL via Prisma 7 (Neon); Vercel Blob for production media uploads; deploying on Vercel",
+      "PostgreSQL via Prisma 7 (Neon); Vercel Blob for production media uploads; deployed on Vercel",
     ],
     stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Vercel Blob"],
   },
