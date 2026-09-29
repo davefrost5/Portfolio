@@ -70,7 +70,7 @@ export const work: WorkProject[] = [
     role: "Developer",
     period: "2026",
     location: "Hoboken, NJ",
-    url: "https://marquee-sigma-three.vercel.app",
+    url: "https://marquee-band.vercel.app",
     repoUrls: ["https://github.com/davefrost5/marquee"],
     summary:
       "Built Marquee, a multi-tenant SaaS for band websites — public sites for music, shows, booking, and media, plus a per-tenant admin portal — evolved from the Force Fed prototype.",
