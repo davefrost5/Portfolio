@@ -65,6 +65,24 @@ export const work: WorkProject[] = [
     stack: ["React", "TypeScript", "Vite"],
   },
   {
+    slug: "marquee",
+    company: "Marquee",
+    role: "Developer",
+    period: "2026",
+    location: "Hoboken, NJ",
+    repoUrls: ["https://github.com/davefrost5/marquee"],
+    summary:
+      "Built Marquee, a multi-tenant SaaS for band websites — public sites for music, shows, booking, and media, plus a per-tenant admin portal — evolved from the Force Fed prototype.",
+    highlights: [
+      "Multi-tenant public sites at `/b/[slug]` with Editorial, Tour Poster, and Gallery templates",
+      "Force Fed as the first tenant; Neon Harbor as a seeded demo tenant",
+      "Admin tools for shows, booking availability, booking inbox, site branding, and gallery uploads",
+      "Onboarding wizard for new bands: slug, brand colors, template, optional Spotify and assets, then publish",
+      "PostgreSQL via Prisma 7 (Neon); Vercel Blob for production media uploads; deploying on Vercel",
+    ],
+    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Vercel Blob"],
+  },
+  {
     slug: "flexgen",
     company: "FlexGen",
     role: "Full-Stack SWE",

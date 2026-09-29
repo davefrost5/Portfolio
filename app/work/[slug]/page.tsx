@@ -54,7 +54,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
           <TextOnlyCard
             title={project.company}
             subtitle={`${project.role} · ${project.period}`}
-            description="No public website — internal/HIPAA-aware platform."
+            description={project.summary}
           />
         )}
       </div>
