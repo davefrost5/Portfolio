@@ -12,15 +12,25 @@
   --color-surface-raised: var(--surface-raised);
   --color-border: var(--border);
   --color-accent: var(--accent);
+  --color-blue: var(--blue);
+  --color-sun: var(--sun);
+  --color-mint: var(--mint);
+  --color-peach: var(--peach);
+  --color-sky: var(--sky);
 }
 
 :root {
-  --ink: #111111;
-  --ink-muted: #6b6760;
-  --surface: #fbfaf7;
-  --surface-raised: #f2efe8;
-  --border: #e4dfd5;
+  --ink: #16130f;
+  --ink-muted: #6b6359;
+  --surface: #f6f1e7;
+  --surface-raised: #efe7d8;
+  --border: #e0d6c4;
   --accent: #ff5a1f;
+  --blue: #2f5bff;
+  --sun: #ffd84d;
+  --mint: #b8e6c9;
+  --peach: #ffd9c7;
+  --sky: #d6e0ff;
 }
 .dark {
   --ink: #ece8e1;
@@ -29,6 +39,11 @@
   --surface-raised: #1c1a17;
   --border: #2d2a25;
   --accent: #ff7a45;
+  --blue: #6f8cff;
+  --sun: #e9c23a;
+  --mint: #24392d;
+  --peach: #3a2a22;
+  --sky: #1f2640;
 }
 
 html { scroll-behavior: smooth; }
@@ -44,8 +59,9 @@ body {
 }
 
 .prose-editorial h1, .prose-editorial h2, .prose-editorial h3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.15;
 }
 .link-underline {
@@ -60,3 +76,15 @@ body {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+body::before {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 60; opacity: .07; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.dot-grid { background-image: radial-gradient(color-mix(in srgb, var(--ink) 14%, transparent) 1px, transparent 1px); background-size: 18px 18px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 32s linear infinite; }
+@keyframes wiggle { 0%,100% { transform: rotate(0) } 25% { transform: rotate(-3deg) } 75% { transform: rotate(3deg) } }
+.hover-wiggle:hover { animation: wiggle .4s ease-in-out; }
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)) } 50% { transform: translateY(-8px) rotate(var(--r,0deg)) } }
+.floaty { animation: floaty 5s ease-in-out infinite; }

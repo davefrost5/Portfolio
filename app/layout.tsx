@@ -4,6 +4,7 @@ import { site } from "@/content/content";
 import { Dock } from "@/components/Dock";
 import { CommandMenu } from "@/components/CommandMenu";
 import { Footer } from "@/components/Footer";
+import { CursorDot } from "@/components/CursorDot";
 import "./globals.css";
 
 const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", style: ["normal", "italic"], variable: "--font-instrument", display: "swap" });
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Footer />
         <Dock />
         <CommandMenu />
+        <CursorDot />
       </body>
     </html>
   );

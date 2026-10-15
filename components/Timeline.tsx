@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "motion/react";
 import type { ExperienceRole } from "@/content/content";
 
 export function Timeline({ roles }: { roles: ExperienceRole[] }) {
+  const tints = ["bg-peach", "bg-sky", "bg-mint", "bg-sun/40"];
+  const chipC = ["bg-accent text-white", "bg-blue text-white", "bg-sun text-ink", "bg-mint text-ink"];
   const [open, setOpen] = useState<string | null>(null);
   return (
     <div className="relative pl-8">
@@ -13,14 +15,14 @@ export function Timeline({ roles }: { roles: ExperienceRole[] }) {
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="3" width="14" height="14" rx="3" /><path d="M8 21l2-4m6 4-2-4M5 10h14" /></svg>
       </div>
       <ol className="space-y-6 pt-8">
-        {roles.map((r) => {
+        {roles.map((r, ri) => {
           const isOpen = open === r.company;
           return (
             <motion.li layout key={r.company} className="relative" onMouseEnter={() => setOpen(r.company)} onMouseLeave={() => setOpen(null)} onFocus={() => setOpen(r.company)}>
-              <span aria-hidden className="absolute -left-[29px] top-2 h-2.5 w-2.5 rounded-full bg-ink ring-4 ring-surface" />
-              <motion.div layout className={`-mx-4 rounded-2xl px-4 py-4 transition-colors ${isOpen ? "bg-surface-raised" : ""}`}>
+              <span aria-hidden className="absolute -left-[31px] top-7 h-3 w-3 rounded-full border-2 border-ink bg-sun" />
+              <motion.div layout className={`rounded-3xl border-2 border-ink p-6 transition-shadow ${tints[ri % 4]} ${isOpen ? "shadow-[6px_6px_0_var(--ink)]" : ""}`}>
                 <motion.div layout="position" className="flex items-baseline justify-between gap-4">
-                  <h3 className="font-serif text-2xl leading-tight text-ink">{r.title}</h3>
+                  <h3 className="text-2xl font-extrabold leading-tight tracking-tight text-ink">{r.title}</h3>
                   <span className="shrink-0 font-mono text-[11px] text-ink-muted">{r.period}</span>
                 </motion.div>
                 <motion.div layout="position" className="mt-2 flex items-center gap-2.5">
@@ -29,15 +31,15 @@ export function Timeline({ roles }: { roles: ExperienceRole[] }) {
                 </motion.div>
                 <motion.p layout="position" className="mt-3 text-[15px] leading-relaxed text-ink-muted">{r.narrative}</motion.p>
                 <motion.div layout="position" className="mt-3 flex flex-wrap gap-1.5">
-                  {r.chips.map((c) => (
-                    <span key={c} className="rounded-full border border-border bg-surface px-2.5 py-0.5 font-mono text-[11px] text-ink">{c}</span>
+                  {r.chips.map((c, ci) => (
+                    <span key={c} className={`hover-wiggle rounded-full px-2.5 py-0.5 font-mono text-[11px] font-medium ${chipC[ci % 4]}`}>{c}</span>
                   ))}
                 </motion.div>
                 <motion.p layout="position" className="mt-3 text-sm text-ink-muted"><span className="font-mono text-[11px] uppercase tracking-wider text-accent">Deployed with</span> · {r.deployedWith}</motion.p>
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ type: "spring", stiffness: 300, damping: 32 }} className="overflow-hidden">
-                      <div className="mt-4 border-t border-dashed border-border pt-4 text-sm">
+                      <div className="mt-4 border-t border-dashed border-ink/30 pt-4 text-sm">
                         <p className="font-mono text-[11px] text-ink-muted">{r.stack.join(" · ")}</p>
                         <p className="mt-2 font-serif text-lg italic leading-snug text-ink">“{r.story}”</p>
                       </div>

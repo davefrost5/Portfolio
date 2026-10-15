@@ -8,15 +8,15 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="mx-auto max-w-[680px] px-6 pt-16 md:pt-24 prose-editorial">
-      <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
+    <div className="mx-auto max-w-[1200px] px-6 pt-16 md:pt-24 prose-editorial">
+      <h1 className="font-sans font-bold tracking-tight text-4xl leading-tight text-ink md:text-5xl">
         {resume.headline}
       </h1>
 
       <p className="mt-4 text-sm text-ink-muted">{resume.downloadNote}</p>
 
       <div className="mt-10 border-t border-border pt-8">
-        <h2 className="font-serif text-xl text-ink">{site.name}</h2>
+        <h2 className="font-sans font-bold tracking-tight text-xl text-ink">{site.name}</h2>
         <p className="mt-1 text-sm text-ink-muted">{site.title}</p>
         <p className="mt-1 text-sm text-ink-muted">{site.location}</p>
         <p className="mt-1 text-sm">
@@ -37,7 +37,7 @@ export default function ResumePage() {
       <div className="mt-10 space-y-10">
         {resume.sections.map((section) => (
           <section key={section.title}>
-            <h3 className="font-serif text-lg text-ink">{section.title}</h3>
+            <h3 className="font-sans font-bold tracking-tight text-lg text-ink">{section.title}</h3>
             <p className="mt-1 text-sm text-ink-muted">
               {section.period} · {section.location}
             </p>
@@ -54,7 +54,7 @@ export default function ResumePage() {
       </div>
 
       <div className="mt-10 border-t border-border pt-8">
-        <h3 className="font-serif text-lg text-ink">Education</h3>
+        <h3 className="font-sans font-bold tracking-tight text-lg text-ink">Education</h3>
         <p className="mt-2 text-sm text-ink-muted">{resume.education}</p>
       </div>
     </div>

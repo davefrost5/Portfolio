@@ -31,7 +31,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
   if (project.slug === "discover-nil") return <DiscoverNilCaseStudy project={project} />;
 
   return (
-    <div className="mx-auto max-w-[680px] px-6 pt-16 md:pt-24">
+    <div className="mx-auto max-w-[1200px] px-6 pt-16 md:pt-24">
       <Link
         href="/#projects"
         className="mb-8 inline-block text-sm text-ink-muted hover:text-ink transition-colors"
@@ -40,7 +40,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
       </Link>
 
       <header className="mb-10">
-        <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
+        <h1 className="font-sans font-bold tracking-tight text-4xl leading-tight text-ink md:text-5xl">
           {project.company}
         </h1>
         <p className="mt-2 text-lg text-accent">{project.role}</p>
@@ -64,7 +64,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
       <div className="prose-editorial max-w-3xl">
         <p className="text-lg leading-relaxed text-ink-muted">{project.summary}</p>
 
-        <h2 className="mt-10 mb-4 font-serif text-2xl text-ink">Highlights</h2>
+        <h2 className="mt-10 mb-4 font-sans font-bold tracking-tight text-2xl text-ink">Highlights</h2>
         <ul className="space-y-3">
           {project.highlights.map((item) => (
             <li key={item} className="flex gap-3 text-ink-muted leading-relaxed">
@@ -74,7 +74,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
           ))}
         </ul>
 
-        <h2 className="mt-10 mb-4 font-serif text-2xl text-ink">Stack</h2>
+        <h2 className="mt-10 mb-4 font-sans font-bold tracking-tight text-2xl text-ink">Stack</h2>
         <div className="flex flex-wrap gap-2">
           {project.stack.map((tech) => (
             <span
