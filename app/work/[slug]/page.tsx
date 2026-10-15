@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { work, getProjectBySlug } from "@/content/content";
 import { WebsitePreview } from "@/components/WebsitePreview";
 import { TextOnlyCard } from "@/components/TextOnlyCard";
+import { DiscoverNilCaseStudy } from "@/components/DiscoverNilCaseStudy";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -27,14 +28,15 @@ export default async function WorkDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+  if (project.slug === "discover-nil") return <DiscoverNilCaseStudy project={project} />;
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12 md:py-16">
+    <div className="mx-auto max-w-[680px] px-6 pt-16 md:pt-24">
       <Link
-        href="/"
+        href="/#projects"
         className="mb-8 inline-block text-sm text-ink-muted hover:text-ink transition-colors"
       >
-        ← Back to work
+        ← Projects
       </Link>
 
       <header className="mb-10">
@@ -49,7 +51,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
 
       <div className="mb-12">
         {project.url ? (
-          <WebsitePreview url={project.url} title={project.company} className="max-w-3xl" />
+          <WebsitePreview url={project.url} title={project.company}  />
         ) : (
           <TextOnlyCard
             title={project.company}

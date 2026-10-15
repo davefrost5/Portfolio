@@ -1,38 +1,35 @@
-import Image from "next/image";
-import { site } from "@/content/content";
+import Link from "next/link";
+import { Reveal } from "./Reveal";
+import { HeroActions } from "./HeroActions";
 
 export function HomeHero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pb-4 pt-10 md:pb-8 md:pt-14">
-      <div className="grid items-center gap-8 md:grid-cols-[minmax(0,544px)_1fr] md:gap-12">
-        <figure className="w-full max-w-[544px]">
-          <Image
-            src={site.hero}
-            alt={`${site.name} demonstrating SYNC at the Stevens Innovation Expo`}
-            width={544}
-            height={359}
-            priority
-            unoptimized
-            className="h-auto w-full border border-border"
-          />
-          <figcaption className="mt-3 text-xs uppercase tracking-[0.18em] text-ink-muted">
-            Stevens Innovation Expo
-          </figcaption>
-        </figure>
-
-        <div>
-          <h1 className="font-serif text-4xl leading-tight tracking-wide text-ink md:text-6xl">
-            {site.name}
-          </h1>
-          <p className="mt-3 text-lg tracking-wide text-accent md:text-xl">
-            {site.title}
-          </p>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-ink-muted md:text-lg">
-            {site.intro}
-          </p>
-          <p className="mt-2 text-sm text-ink-muted">{site.location}</p>
-        </div>
-      </div>
+    <section className="relative mx-auto max-w-[720px] overflow-hidden px-6 pt-24 md:pt-32">
+      <div aria-hidden className="pointer-events-none absolute -right-24 top-10 h-72 w-72 rounded-full bg-accent/90 md:-right-10 md:top-16 md:h-[22rem] md:w-[22rem]" />
+      <Reveal>
+        <p className="relative mb-8 font-mono text-xs uppercase tracking-[0.18em] text-ink-muted">David Frost · Hoboken, NJ</p>
+      </Reveal>
+      <Reveal delay={0.08}>
+        <h1 className="relative font-serif text-[2.6rem] leading-[1.02] tracking-tight text-ink md:text-[4.4rem]">
+          David Frost builds
+          <span className="block pl-[0.6em]">and ships products</span>
+          <span className="block">with customers —</span>
+          <span className="block pl-[0.6em]">
+            <em className="italic">CTO at</em>{" "}
+            <Link href="/work/discover-nil" className="underline decoration-2 underline-offset-[6px]">Discover NIL</Link>.
+          </span>
+        </h1>
+      </Reveal>
+      <Reveal delay={0.18}>
+        <p className="relative mt-10 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-ink-muted">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+          </span>
+          Currently: CTO @ Discover NIL · open to forward-deployed / solutions roles · Hoboken, NJ / ET
+        </p>
+      </Reveal>
+      <Reveal delay={0.26}><HeroActions /></Reveal>
     </section>
   );
 }
