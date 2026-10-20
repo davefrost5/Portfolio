@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-editorial">
-      <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
+    <div className="mx-auto max-w-[1200px] px-6 pt-16 md:pt-24 prose-editorial">
+      <h1 className="font-sans font-bold tracking-tight text-4xl leading-tight text-ink md:text-5xl">
         {about.headline}
       </h1>
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
         ))}
       </div>
 
-      <h2 className="mt-12 mb-4 font-serif text-2xl text-ink">Skills</h2>
+      <h2 className="mt-12 mb-4 font-sans font-bold tracking-tight text-2xl text-ink">Skills</h2>
       <div className="flex flex-wrap gap-2">
         {about.skills.map((skill) => (
           <span

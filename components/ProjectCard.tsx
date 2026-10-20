@@ -13,7 +13,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col justify-center">
         <div className="mb-3 flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <Link href={`/work/${project.slug}`}>
-            <h2 className="font-serif text-2xl text-ink hover:text-accent transition-colors">
+            <h2 className="font-sans font-bold tracking-tight text-2xl text-ink hover:text-accent transition-colors">
               {project.company}
             </h2>
           </Link>

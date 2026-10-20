@@ -193,3 +193,102 @@ export const navLinks = [
 export function getProjectBySlug(slug: string): WorkProject | undefined {
   return work.find((p) => p.slug === slug);
 }
+
+/* ---------- Editorial redesign data ---------- */
+
+export const contactEmails = {
+  personal: "Dfrost3374@gmail.com",
+  work: "dave@discovernil.com",
+};
+
+export type ExperienceRole = {
+  title: string;
+  company: string;
+  logo: string; // short monogram used as a logo tile
+  logoColor: string;
+  period: string;
+  narrative: string;
+  chips: string[];
+  deployedWith: string;
+  stack: string[];
+  story: string;
+  projectSlugs: string[];
+};
+
+export const experience: ExperienceRole[] = [
+  {
+    title: "CTO and Founding Engineer",
+    company: "Discover NIL",
+    logo: "DN",
+    logoColor: "#E8590C",
+    period: "2025 Nov – Present",
+    narrative:
+      "Leading engineering for a dual-platform NIL marketplace: a React Native athlete app and a Next.js portal for universities and brands, backed by SQL and Python data pipelines for athlete matching and outreach analytics.",
+    chips: ["0→1 platform", "235k athletes", "600+ outreach", "Dual platform"],
+    deployedWith: "Athletes, university athletic departments, and brand partners",
+    stack: ["React Native", "Next.js", "TypeScript", "SQL", "Python"],
+    story:
+      "Built social API integrations so universities and brands can discover athletes and track engagement from one portal instead of scattered spreadsheets.",
+    projectSlugs: ["discover-nil"],
+  },
+  {
+    title: "Full-Stack SWE / FSE",
+    company: "FlexGen",
+    logo: "FG",
+    logoColor: "#1F6FEB",
+    period: "2024 May – 2025 May",
+    narrative:
+      "Built React UI inside a 10-person cross-functional pod for HybridOS, FlexGen's energy storage platform, including real-time dashboards for battery storage performance.",
+    chips: ["HybridOS", "Real-time dashboards", "10-person pod"],
+    deployedWith: "HybridOS product pod and energy storage operations users",
+    stack: ["React", "TypeScript", "Real-time dashboards"],
+    story:
+      "Turned live battery-storage telemetry into monitoring and control components operators could read at a glance.",
+    projectSlugs: ["flexgen"],
+  },
+  {
+    title: "Co-Founder",
+    company: "SYNC Designs",
+    logo: "SY",
+    logoColor: "#2F9E44",
+    period: "2024 Sep –",
+    narrative:
+      "Co-founded SYNC to build an EEG-controlled hand exoskeleton for prosthetics research, from the SENIORDESPY BCI signal pipeline to the live demo site.",
+    chips: ["84% EEG accuracy", "L3Harris win", "BCI pipeline"],
+    deployedWith: "Stevens faculty advisors, test users, and Innovation Expo judges",
+    stack: ["Python", "EEG signal processing", "Embedded systems", "React"],
+    story:
+      "Designed zero-calibration onboarding so new users could control the exoskeleton without a long per-user training session.",
+    projectSlugs: ["sync-prosthetics"],
+  },
+  {
+    title: "Full-Stack Engineer",
+    company: "SmartPatient Medical",
+    logo: "SP",
+    logoColor: "#7048E8",
+    period: "2022 Sep – 2023 Dec",
+    narrative:
+      "Built a HIPAA-aware patient portal for a Hoboken medical startup, from database schema to clinician-facing UI, with role-based access controls.",
+    chips: ["HIPAA-aware", "RBAC", "Schema → UI"],
+    deployedWith: "Clinicians and the startup's founding team",
+    stack: ["React", "Node.js", "PostgreSQL"],
+    story:
+      "Shaped role-based access around how clinicians actually worked, so protected health information stayed scoped to the right people.",
+    projectSlugs: ["smartpatient-medical"],
+  },
+];
+
+export const skillGroups = [
+  { name: "Languages & Core", items: ["TypeScript", "JavaScript", "Python", "SQL", "React", "Next.js", "React Native"] },
+  { name: "Infra", items: ["Vercel", "PostgreSQL", "Prisma", "Node.js", "Real-time systems"] },
+  { name: "AI & Signals", items: ["EEG signal processing", "BCI pipelines", "Data pipelines"] },
+];
+
+export const projectIcons: Record<string, string> = {
+  "discover-nil": "◆",
+  "force-fed": "♫",
+  marquee: "▤",
+  flexgen: "⚡",
+  "sync-prosthetics": "✋",
+  "smartpatient-medical": "✚",
+};

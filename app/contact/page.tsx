@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-12 md:py-16 prose-editorial">
-      <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
+    <div className="mx-auto max-w-[1200px] px-6 pt-16 md:pt-24 prose-editorial">
+      <h1 className="font-sans font-bold tracking-tight text-4xl leading-tight text-ink md:text-5xl">
         {contact.headline}
       </h1>
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
           <p className="text-xs uppercase tracking-wider text-ink-muted">Email</p>
           <a
             href={`mailto:${site.email}`}
-            className="mt-1 inline-block font-serif text-xl text-ink hover:text-accent transition-colors"
+            className="mt-1 inline-block font-sans font-bold tracking-tight text-xl text-ink hover:text-accent transition-colors"
           >
             {site.email}
           </a>
@@ -32,7 +32,7 @@ export default function ContactPage() {
             href={site.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 inline-block font-serif text-xl text-ink hover:text-accent transition-colors"
+            className="mt-1 inline-block font-sans font-bold tracking-tight text-xl text-ink hover:text-accent transition-colors"
           >
             linkedin.com/in/davefrost525
           </a>
@@ -44,7 +44,7 @@ export default function ContactPage() {
             href={site.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-1 inline-block font-serif text-xl text-ink hover:text-accent transition-colors"
+            className="mt-1 inline-block font-sans font-bold tracking-tight text-xl text-ink hover:text-accent transition-colors"
           >
             github.com/davefrost5
           </a>

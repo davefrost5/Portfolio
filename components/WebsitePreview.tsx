@@ -16,10 +16,10 @@ function HostnameFallback({ url, title }: { url: string; title: string }) {
   const hostname = hostnameFromUrl(url);
   return (
     <div className="flex h-full min-h-[200px] flex-col items-center justify-center gap-3 bg-surface-raised p-8">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface font-serif text-lg text-accent">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface font-sans font-bold tracking-tight text-lg text-accent">
         {hostname.charAt(0).toUpperCase()}
       </div>
-      <p className="font-serif text-lg text-ink">{title}</p>
+      <p className="font-sans font-bold tracking-tight text-lg text-ink">{title}</p>
       <p className="text-sm text-ink-muted">{hostname}</p>
     </div>
   );

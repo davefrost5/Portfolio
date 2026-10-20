@@ -32,12 +32,12 @@ export async function LinkedInPostCard({ url }: LinkedInPostCardProps) {
         </div>
       ) : (
         <div className="flex w-full shrink-0 items-center justify-center bg-surface p-6 sm:w-48 md:w-56">
-          <span className="font-serif text-2xl text-accent">in</span>
+          <span className="font-sans font-bold tracking-tight text-2xl text-accent">in</span>
         </div>
       )}
       <div className="flex flex-1 flex-col justify-center gap-2 p-5">
         <p className="text-xs uppercase tracking-wider text-ink-muted">LinkedIn</p>
-        <p className="font-serif text-lg leading-snug text-ink line-clamp-2 group-hover:text-accent transition-colors">
+        <p className="font-sans font-bold tracking-tight text-lg leading-snug text-ink line-clamp-2 group-hover:text-accent transition-colors">
           {title}
         </p>
         {description && (

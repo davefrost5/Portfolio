@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { work, getProjectBySlug } from "@/content/content";
 import { WebsitePreview } from "@/components/WebsitePreview";
 import { TextOnlyCard } from "@/components/TextOnlyCard";
+import { DiscoverNilCaseStudy } from "@/components/DiscoverNilCaseStudy";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -27,18 +28,19 @@ export default async function WorkDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
+  if (project.slug === "discover-nil") return <DiscoverNilCaseStudy project={project} />;
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12 md:py-16">
+    <div className="mx-auto max-w-[1200px] px-6 pt-16 md:pt-24">
       <Link
-        href="/"
+        href="/#projects"
         className="mb-8 inline-block text-sm text-ink-muted hover:text-ink transition-colors"
       >
-        ← Back to work
+        ← Projects
       </Link>
 
       <header className="mb-10">
-        <h1 className="font-serif text-4xl leading-tight text-ink md:text-5xl">
+        <h1 className="font-sans font-bold tracking-tight text-4xl leading-tight text-ink md:text-5xl">
           {project.company}
         </h1>
         <p className="mt-2 text-lg text-accent">{project.role}</p>
@@ -49,7 +51,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
 
       <div className="mb-12">
         {project.url ? (
-          <WebsitePreview url={project.url} title={project.company} className="max-w-3xl" />
+          <WebsitePreview url={project.url} title={project.company}  />
         ) : (
           <TextOnlyCard
             title={project.company}
@@ -62,7 +64,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
       <div className="prose-editorial max-w-3xl">
         <p className="text-lg leading-relaxed text-ink-muted">{project.summary}</p>
 
-        <h2 className="mt-10 mb-4 font-serif text-2xl text-ink">Highlights</h2>
+        <h2 className="mt-10 mb-4 font-sans font-bold tracking-tight text-2xl text-ink">Highlights</h2>
         <ul className="space-y-3">
           {project.highlights.map((item) => (
             <li key={item} className="flex gap-3 text-ink-muted leading-relaxed">
@@ -72,7 +74,7 @@ export default async function WorkDetailPage({ params }: PageProps) {
           ))}
         </ul>
 
-        <h2 className="mt-10 mb-4 font-serif text-2xl text-ink">Stack</h2>
+        <h2 className="mt-10 mb-4 font-sans font-bold tracking-tight text-2xl text-ink">Stack</h2>
         <div className="flex flex-wrap gap-2">
           {project.stack.map((tech) => (
             <span
